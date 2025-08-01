@@ -32,6 +32,11 @@ func NewConfig(options ...func(*Config)) (*Config, error) {
 		option(cfg)
 	}
 
+	err := cfg.Validate()
+	if err != nil {
+		return nil, err
+	}
+
 	return cfg, nil
 }
 
