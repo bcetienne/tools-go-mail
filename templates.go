@@ -1,1 +1,1 @@
-package go_mail
+package gomail
